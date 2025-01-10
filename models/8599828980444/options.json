@@ -1,0 +1,1 @@
+{"batch_size": 1024, "batch_gpu": 1024, "train_time": 1000000, "tile_size": 32, "training_brains": [[1818, 759, "left"], [1818, 820, "right"], [1818, 830, "right"]], "map_type": "fom", "resolution": "00", "lr_disc": 5e-05, "lr_gan": 5e-05, "wd_disc": 0, "wd_gan": 0, "latent_dim": 32, "n_critic": 1, "c": 0.01, "save_dir": "models/exercise34"}
