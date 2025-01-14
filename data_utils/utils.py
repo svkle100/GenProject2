@@ -26,7 +26,7 @@ def get_brain_section(brain, section, region, view):
 def visualize_batch(batch, map_type, normalized=True):
     if type(batch) == torch.Tensor:
         batch = batch.clone().detach().cpu()
-    if len(batch.shape) == 4:
+    if len(batch.shape) == 4 and type(batch) == torch.Tensor:
         batch = batch.permute(0, 2, 3, 1)
     if len(batch.shape) == 2 or (len(batch.shape) == 3 and batch.shape[-1] == 3):
         bs = 1
