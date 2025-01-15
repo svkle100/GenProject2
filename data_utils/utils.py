@@ -18,7 +18,7 @@ def get_brain_section(brain, section, region, view):
     dir = os.listdir(os.path.join(get_dataset_path(), view))
     file = ""
     for f in dir:
-        if f"Vervet{brain}_s{section:04d}_{region if region is not None else ""}" in f:
+        if f"Vervet{brain}_s{section:04d}_{region if region is not None else ''}" in f:
             file = f
     file = h5py.File(os.path.join(get_dataset_path(), f"{view}/{file}"), 'r')
     return file
@@ -39,11 +39,11 @@ def visualize_batch(batch, map_type, normalized=True):
     fig, axs = plt.subplots(1, bs, figsize = [bs * 2 * 5, bs*5])
     if bs == 1:
         axs.axis('off')
-        axs.imshow(batch[0])
+        axs.imshow(batch[0], cmap='gray')
     else:
         for i in range(bs):
             axs[i].axis('off')
-            axs[i].imshow(batch[i])
+            axs[i].imshow(batch[i], cmap='gray')
     plt.show()
 
 
